@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, CheckCircle, Star, Users, Clock, Award } from 'lucide-react';
@@ -11,27 +11,37 @@ const serviceCategories = [
     icon: <Lightbulb className="h-10 w-10 text-white" />,
     title: "ERPNext Services",
     description: "Comprehensive solutions for ERPNext, from consulting and implementation to customization and ongoing support.",
-    longDescription: "Transform your business operations with our comprehensive ERPNext solutions. We provide end-to-end services from initial consultation to full implementation, ensuring your organization maximizes the potential of this powerful ERP system.",
+    longDescription: "At Ahlyaris, we help organizations unlock the full potential of ERPNext with tailored solutions, industry expertise, and end-to-end support. Whether you are migrating from legacy systems or starting fresh, we ensure ERPNext becomes the backbone of your digital transformation. ",
     details: [
-      "ERPNext consulting, implementation & module-wise deployment",
-      "Customization, workflow automation & third-party integrations",
-      "Data migration, user training & adoption support",
-      "Ongoing support, upgrades & cloud/on-premise hosting solutions",
+      "ERPNext consulting, implementation & Rollout",
+      "Customization, workflow automation, third-party integrations & industry-specific apps built on the Frappe",
+      "Secure & accurate migration of data from legacy systems like SAP ECC, S/4HANA, Tally, or spreadsheets into ERPNext",
+      "Seamless integration of third-party systems like payment gateways, e-commerce platforms, CRM tools, government portals with ERPNext.",
+      "Dedicated helpdesk, ticketing portal, and expert team to resolve issues, provide training, and keep your ERPNext running smoothly.",
+      "Structured training programs to empower your team with ERPNext know-how, ensuring faster adoption and ROI.",
+      "We help you unlock insights with custom reports and dashboards - so your team can make smarter, data-driven decisions every day."
     ],
     features: [
-      "Complete business process automation",
-      "Real-time reporting and analytics",
-      "Multi-company and multi-currency support",
-      "Mobile-responsive interface",
-      "Extensive customization capabilities",
-      "Seamless third-party integrations"
+      "Open-source scalability with no per user license cost.",
+      "Granular User Roles & Access: Total control at every level",
+      "Multi-Level Approvals: Smooth workflows, smarter governance",
+      "API-First Architecture: Easy integrations, endless possibilities",
+      "Custom Reports: Insights the way you need them",
+      "Multi-Currency and Multi-Language Support: Go global with confidence",
+      "Multi-Subsidiary Handling: One ERP, many businesses",
+      "Document Management: Store, share & secure your files effortlessly.",
+      "Workflow Automation to automate day-to-day tasks"
     ],
     benefits: [
-      "Reduced operational costs by up to 40%",
-      "Improved efficiency and productivity",
-      "Better decision-making with real-time data",
-      "Streamlined business processes",
-      "Enhanced collaboration across departments"
+      "Sales: Automates the entire order-to-cash process while providing real-time insights to boost sales efficiency and growth.",
+      "Procurement/Buying: Streamlines purchasing by automating supplier management, purchase orders, and material requests, ensuring efficient and cost-effective procurement.",
+      "Customer Relationship Management : Handles lead management, opportunity tracking, and customer interactions, enhancing sales efficiency and fostering stronger client relationships.",
+      "Accounting: Streamlines financial management by integrating transactions across sales, purchases, and inventory, ensuring accurate bookkeeping and real-time financial insights.",
+      "Inventory Management: Offers stock control with real-time tracking, automated replenishment, and comprehensive reporting, ensuring optimal inventory levels and operational efficiency.",
+      "Manufacturing: Integrates processes like material planning, work orders, and quality control, enhancing efficiency and reducing costs.",
+      "HR Management: Simplifies recruitment, payroll, attendance, and appraisals -bringing all your workforce management into one seamless system.",
+      "Asset Management: Handles entire asset lifecycle - from acquisition to disposal - enhancing tracking, maintenance, and financial oversight.",
+      "Project Management: Offers project planning and execution by integrating tasks, timelines, resources, and budgets into a unified system."
     ],
     gradient: "from-orange-400 via-red-500 to-pink-500",
     bgImage: "/images/services/erp-services.jpg",
@@ -198,6 +208,7 @@ const serviceCategories = [
 const ServiceDetail = () => {
   const { serviceId } = useParams();
   const navigate = useNavigate();
+  const [activeTab, setActiveTab] = useState('details');
   
   const service = serviceCategories.find(s => s.id === serviceId);
   
@@ -320,94 +331,116 @@ const ServiceDetail = () => {
       {/* Service Details Section */}
       <section className="relative py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* What We Offer */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
-              <div className="relative p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">What We Offer</h3>
-                <ul className="space-y-4">
-                  {service.details.map((detail, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start space-x-3"
-                    >
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{detail}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+          {/* Horizontal Tab Navigation */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center mb-12"
+          >
+            <div className="flex bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+              {[
+                { id: 'details', label: 'What We Offer', icon: CheckCircle },
+                { id: 'features', label: 'Key Features', icon: Star },
+                { id: 'benefits', label: service.id === 'erpnext-services' ? 'ERPNext Modules' : 'Benefits', icon: Award }
+              ].map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2 ${
+                    activeTab === tab.id
+                      ? `bg-gradient-to-r ${service.gradient} text-white shadow-lg`
+                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  <tab.icon className="w-4 h-4" />
+                  <span>{tab.label}</span>
+                </button>
+              ))}
+            </div>
+          </motion.div>
 
-            {/* Key Features */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
-              <div className="relative p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Key Features</h3>
-                <ul className="space-y-4">
-                  {service.features.map((feature, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start space-x-3"
-                    >
-                      <div className={`w-3 h-3 rounded-full mt-2 flex-shrink-0 bg-gradient-to-r ${service.gradient}`}></div>
-                      <span className="text-gray-300">{feature}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
+          {/* Tab Content */}
+          <motion.div
+            key={activeTab}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
+            <div className="relative p-8 md:p-12">
+              {activeTab === 'details' && (
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+                    <CheckCircle className="w-8 h-8 text-green-400 mr-4" />
+                    What We Offer
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                    {service.details.map((detail, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 hover:from-green-500/20 hover:to-emerald-500/20 transition-all duration-300 border border-green-400/20"
+                      >
+                        <div className="w-3 h-3 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">{detail}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
-            {/* Benefits */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
-              <div className="relative p-8">
-                <h3 className="text-2xl font-bold text-white mb-6">Benefits</h3>
-                <ul className="space-y-4">
-                  {service.benefits.map((benefit, index) => (
-                    <motion.li
-                      key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.6, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="flex items-start space-x-3"
-                    >
-                      <Star className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                      <span className="text-gray-300">{benefit}</span>
-                    </motion.li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          </div>
+              {activeTab === 'features' && (
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+                    <div className={`w-8 h-8 rounded-full mr-4 bg-gradient-to-r ${service.gradient}`}></div>
+                    Key Features
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    {service.features.map((feature, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 hover:from-white/10 hover:to-white/15 transition-all duration-300 border border-white/10 group"
+                      >
+                        <div className={`w-3 h-3 rounded-full mt-2 flex-shrink-0 bg-gradient-to-r ${service.gradient} group-hover:scale-125 transition-transform duration-300`}></div>
+                        <span className="text-gray-200 leading-relaxed">{feature}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {activeTab === 'benefits' && (
+                <div>
+                  <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+                    <Star className="w-8 h-8 text-yellow-400 mr-4" />
+                    {service.id === 'erpnext-services' ? 'Key Modules of ERPNext' : 'Benefits'}
+                  </h3>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                    {service.benefits.map((benefit, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 transition-all duration-300 border border-yellow-400/20"
+                      >
+                        <div className="w-3 h-3 rounded-full bg-yellow-400 mt-2 flex-shrink-0"></div>
+                        <span className="text-gray-200 leading-relaxed">{benefit}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </motion.div>
         </div>
       </section>
 

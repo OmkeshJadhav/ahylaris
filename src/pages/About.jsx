@@ -131,12 +131,6 @@ const About = () => {
       </section>
 
       <section className="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50 relative overflow-hidden">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-primary to-secondary rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full blur-2xl animate-bounce" style={{ animationDelay: '2s' }} />
-        </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.h2
@@ -342,17 +336,6 @@ const About = () => {
       </section>
 
       <section className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          {/* Floating Orbs */}
-          <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-xl opacity-20 animate-pulse"></div>
-          <div className="absolute bottom-20 right-20 w-40 h-40 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full blur-xl opacity-20 animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-r from-green-400 to-cyan-500 rounded-full blur-lg opacity-30 animate-bounce" style={{ animationDelay: '2s' }}></div>
-          
-          {/* Geometric Shapes */}
-          <div className="absolute top-10 right-1/4 w-16 h-16 border-2 border-white/10 rotate-45 animate-spin" style={{ animationDuration: '20s' }}></div>
-          <div className="absolute bottom-10 left-1/3 w-12 h-12 border-2 border-pink-300/20 rotate-12 animate-pulse"></div>
-        </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <motion.div

@@ -58,13 +58,6 @@ const servicesData = [
 const OurServices = () => {
   return (
     <section className="py-8 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-100/30 via-purple-100/20 to-indigo-100/30"></div>
-        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-200/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-indigo-200/20 rounded-full blur-2xl"></div>
-      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

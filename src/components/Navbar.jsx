@@ -47,11 +47,6 @@ const Navbar = () => {
 
   return (
     <>
-      {/* Decorative background blur elements */}
-      <div className="fixed top-0 left-0 w-full h-32 pointer-events-none z-40">
-        <div className="absolute top-0 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-1/4 w-48 h-48 bg-gradient-to-r from-pink-400/20 to-orange-500/20 rounded-full blur-3xl"></div>
-      </div>
 
       <motion.nav 
         initial="hidden"
@@ -109,8 +104,6 @@ const Navbar = () => {
                   >
                     <span>{link.name}</span>
                     
-                    {/* Hover effect */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity blur-xl"></div>
                   </Link>
                   
                   {/* Active indicator */}

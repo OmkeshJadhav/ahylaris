@@ -63,12 +63,6 @@ const WhyChooseUs = () => {
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30"></div>
       
-      {/* Decorative background blur elements */}
-      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-r from-pink-400/20 to-orange-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-cyan-400/15 to-teal-500/15 rounded-full blur-3xl"></div>
-      </div>
 
       <div className="relative container mx-auto px-4">
         <motion.div
@@ -124,10 +118,6 @@ const WhyChooseUs = () => {
                 </div> */}
               </div>
               
-              {/* Enhanced decorative elements */}
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-r from-blue-400/30 to-purple-500/30 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-              <div className="absolute -bottom-6 -left-6 w-40 h-40 bg-gradient-to-r from-pink-400/25 to-orange-500/25 rounded-full blur-2xl group-hover:blur-3xl transition-all duration-500"></div>
-              <div className="absolute top-1/2 -right-8 w-24 h-24 bg-gradient-to-r from-cyan-400/20 to-teal-500/20 rounded-full blur-xl"></div>
             </div>
           </motion.div>
 

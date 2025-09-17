@@ -41,6 +41,7 @@ const CustomersWhoTrustUs = () => {
               <img key={`duplicate-${index}`} src={logo} alt={`Client ${index + 1}`} className="mx-8 max-h-20" />
             ))}
           </div>
+          <img src="../../public/images/home/clients-logo/erp-customers.webp" alt="ERPNext" className="mx-auto max-h-72" />
         </div>
       </div>
     </section>

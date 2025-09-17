@@ -38,7 +38,7 @@ const OurTeam = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section with Enhanced Background */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Team Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -55,7 +55,6 @@ const OurTeam = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-            className="mb-8"
           >
             <h1 className="text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
               Meet Our Expert Team
@@ -69,7 +68,7 @@ const OurTeam = () => {
           </motion.div>
 
           {/* Stats Section */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 100 }}
@@ -87,7 +86,7 @@ const OurTeam = () => {
                 </div>
               );
             })}
-          </motion.div>
+          </motion.div> */}
         </div>
       </section>
 

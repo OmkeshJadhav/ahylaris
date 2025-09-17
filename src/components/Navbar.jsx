@@ -107,7 +107,6 @@ const Navbar = () => {
                         : 'text-gray-700 hover:text-white hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-500'
                     }`}
                   >
-                    <span className="text-sm">{link.icon}</span>
                     <span>{link.name}</span>
                     
                     {/* Hover effect */}

@@ -48,7 +48,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="relative min-h-screen bg-white">
 
       {/* Hero Section */}
       <section className="relative pt-12 overflow-hidden">
@@ -60,7 +60,7 @@ const Contact = () => {
               transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
               className="inline-block"
             >
-              <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-6">
+              <h1 className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-gray-900 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
                 Get In Touch
               </h1>
               <div className="h-1 w-32 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto rounded-full"></div>
@@ -70,7 +70,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 mt-6 max-w-2xl mx-auto leading-relaxed"
+              className="text-xl text-gray-700 mt-6 max-w-2xl mx-auto leading-relaxed"
             >
               Ready to transform your business? Let's start a conversation that could change everything.
             </motion.p>
@@ -134,7 +134,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <h3 className="text-2xl font-bold text-white mb-6">Follow Our Journey</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Our Journey</h3>
             <div className="flex justify-center space-x-6">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -164,35 +164,35 @@ const Contact = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 to-gray-50/30 rounded-3xl backdrop-blur-sm border border-gray-200"></div>
               <div className="relative p-8 lg:p-12">
-                <h2 className="text-3xl font-bold text-white mb-2">Send Us a Message</h2>
-                <p className="text-gray-400 mb-8">We'd love to hear about your project and how we can help</p>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
+                <p className="text-gray-600 mb-8">We'd love to hear about your project and how we can help</p>
                 
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-white font-medium mb-2">Name</label>
+                      <label htmlFor="name" className="block text-gray-900 font-medium mb-2">Name</label>
                       <Input 
                         type="text" 
                         id="name" 
                         placeholder="Your Name" 
-                        className="w-full bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-purple-500 backdrop-blur-sm rounded-xl"
+                        className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-purple-500 backdrop-blur-sm rounded-xl"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-white font-medium mb-2">Email</label>
+                      <label htmlFor="email" className="block text-gray-900 font-medium mb-2">Email</label>
                       <Input 
                         type="email" 
                         id="email" 
                         placeholder="Your Email" 
-                        className="w-full bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-purple-500 backdrop-blur-sm rounded-xl"
+                        className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-purple-500 backdrop-blur-sm rounded-xl"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-white font-medium mb-2">Subject</label>
+                    <label htmlFor="subject" className="block text-gray-900 font-medium mb-2">Subject</label>
                     <Input 
                       type="text" 
                       id="subject" 
@@ -202,12 +202,12 @@ const Contact = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-white font-medium mb-2">Message</label>
+                    <label htmlFor="message" className="block text-gray-900 font-medium mb-2">Message</label>
                     <Textarea 
                       id="message" 
                       placeholder="Tell us about your project..." 
                       rows="6" 
-                      className="w-full bg-white/10 border-white/20 text-white placeholder-gray-400 focus:border-purple-500 focus:ring-purple-500 backdrop-blur-sm rounded-xl resize-none"
+                      className="w-full bg-gray-50 border-gray-300 text-gray-900 placeholder-gray-500 focus:border-purple-500 focus:ring-purple-500 backdrop-blur-sm rounded-xl resize-none"
                     />
                   </div>
                   
@@ -234,10 +234,10 @@ const Contact = () => {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 to-gray-50/30 rounded-3xl backdrop-blur-sm border border-gray-200"></div>
               <div className="relative p-8 lg:p-12">
-                <h2 className="text-3xl font-bold text-white mb-2">Find Us Here</h2>
-                <p className="text-gray-400 mb-8">Visit our office for a face-to-face consultation</p>
+                <h2 className="text-3xl font-bold text-gray-900 mb-2">Find Us Here</h2>
+                <p className="text-gray-600 mb-8">Visit our office for a face-to-face consultation</p>
                 
                 <motion.div
                   whileHover={{ scale: 1.02 }}

@@ -214,8 +214,8 @@ const ServiceDetail = () => {
   
   if (!service) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="text-center text-white">
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <div className="text-center text-gray-900">
           <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
           <Button onClick={() => navigate('/services')} className="bg-purple-600 hover:bg-purple-700">
             Back to Services
@@ -233,7 +233,7 @@ const ServiceDetail = () => {
   ];
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="relative min-h-screen bg-white">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
@@ -254,7 +254,7 @@ const ServiceDetail = () => {
             <Button
               onClick={() => navigate('/services')}
               variant="ghost"
-              className="text-white hover:bg-white backdrop-blur-sm border border-white/20 rounded-xl"
+              className="text-gray-900 hover:bg-gray-100 backdrop-blur-sm border border-gray-300 rounded-xl"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Services
@@ -278,11 +278,11 @@ const ServiceDetail = () => {
                   {service.icon}
                 </motion.div>
                 
-                <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent mb-6">
+                <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gray-900 via-purple-600 to-cyan-600 bg-clip-text text-transparent mb-6">
                   {service.title}
                 </h1>
                 
-                <p className="text-xl text-gray-300 leading-relaxed mb-8">
+                <p className="text-xl text-gray-700 leading-relaxed mb-8">
                   {service.longDescription}
                 </p>
               </div>
@@ -297,13 +297,13 @@ const ServiceDetail = () => {
                     transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                     className="relative group"
                   >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-white/5 rounded-xl backdrop-blur-sm border border-white/20"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-gray-100/50 to-gray-50/30 rounded-xl backdrop-blur-sm border border-gray-200"></div>
                     <div className="relative p-4 text-center">
                       <div className={`inline-flex p-2 rounded-full bg-gradient-to-r ${stat.gradient} mb-2`}>
                         <stat.icon className="w-4 h-4 text-white" />
                       </div>
-                      <div className="text-lg font-bold text-white">{stat.value}</div>
-                      <div className="text-gray-300 text-xs">{stat.label}</div>
+                      <div className="text-lg font-bold text-gray-900">{stat.value}</div>
+                      <div className="text-gray-600 text-xs">{stat.label}</div>
                     </div>
                   </motion.div>
                 ))}
@@ -339,7 +339,7 @@ const ServiceDetail = () => {
             viewport={{ once: true }}
             className="flex justify-center mb-12"
           >
-            <div className="flex bg-white/10 backdrop-blur-sm rounded-2xl p-2 border border-white/20">
+            <div className="flex bg-gray-100/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-200">
               {[
                 { id: 'details', label: 'What We Offer', icon: CheckCircle },
                 { id: 'features', label: 'Key Features', icon: Star },
@@ -351,7 +351,7 @@ const ServiceDetail = () => {
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 flex items-center space-x-2 ${
                     activeTab === tab.id
                       ? `bg-gradient-to-r ${service.gradient} text-white shadow-lg`
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
                   }`}
                 >
                   <tab.icon className="w-4 h-4" />
@@ -369,11 +369,11 @@ const ServiceDetail = () => {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 to-gray-50/30 rounded-3xl backdrop-blur-sm border border-gray-200"></div>
             <div className="relative p-8 md:p-12">
               {activeTab === 'details' && (
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
                     <CheckCircle className="w-8 h-8 text-green-400 mr-4" />
                     What We Offer
                   </h3>
@@ -387,7 +387,7 @@ const ServiceDetail = () => {
                         className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 hover:from-green-500/20 hover:to-emerald-500/20 transition-all duration-300 border border-green-400/20"
                       >
                         <div className="w-3 h-3 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">{detail}</span>
+                        <span className="text-gray-700 leading-relaxed">{detail}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -396,7 +396,7 @@ const ServiceDetail = () => {
 
               {activeTab === 'features' && (
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
                     <div className={`w-8 h-8 rounded-full mr-4 bg-gradient-to-r ${service.gradient}`}></div>
                     Key Features
                   </h3>
@@ -407,10 +407,10 @@ const ServiceDetail = () => {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 hover:from-white/10 hover:to-white/15 transition-all duration-300 border border-white/10 group"
+                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:from-gray-100 hover:to-gray-150 transition-all duration-300 border border-gray-200 group"
                       >
                         <div className={`w-3 h-3 rounded-full mt-2 flex-shrink-0 bg-gradient-to-r ${service.gradient} group-hover:scale-125 transition-transform duration-300`}></div>
-                        <span className="text-gray-200 leading-relaxed">{feature}</span>
+                        <span className="text-gray-700 leading-relaxed">{feature}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -419,7 +419,7 @@ const ServiceDetail = () => {
 
               {activeTab === 'benefits' && (
                 <div>
-                  <h3 className="text-3xl font-bold text-white mb-8 text-center flex items-center justify-center">
+                  <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center flex items-center justify-center">
                     <Star className="w-8 h-8 text-yellow-400 mr-4" />
                     {service.id === 'erpnext-services' ? 'Key Modules of ERPNext' : 'Benefits'}
                   </h3>
@@ -433,7 +433,7 @@ const ServiceDetail = () => {
                         className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 transition-all duration-300 border border-yellow-400/20"
                       >
                         <div className="w-3 h-3 rounded-full bg-yellow-400 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-200 leading-relaxed">{benefit}</span>
+                        <span className="text-gray-700 leading-relaxed">{benefit}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -455,12 +455,12 @@ const ServiceDetail = () => {
             className="text-center"
           >
             <div className="relative max-w-4xl mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/5 rounded-3xl backdrop-blur-sm border border-white/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-100/50 to-gray-50/30 rounded-3xl backdrop-blur-sm border border-gray-200"></div>
               <div className="relative p-12">
-                <h2 className="text-4xl font-bold text-white mb-6">
+                <h2 className="text-4xl font-bold text-gray-900 mb-6">
                   Ready to Get Started?
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
                   Let's discuss how our {service.title} can transform your business and drive growth.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -473,7 +473,7 @@ const ServiceDetail = () => {
                   <Button
                     onClick={() => navigate('/contact')}
                     variant="outline"
-                    className="border-purple-400/60 text-purple-800 hover:bg-purple-500/20 hover:border-purple-300 hover:text-white backdrop-blur-sm px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
+                    className="border-purple-400 text-purple-700 hover:bg-purple-100 hover:border-purple-500 hover:text-purple-800 backdrop-blur-sm px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                   >
                     Schedule Consultation
                   </Button>

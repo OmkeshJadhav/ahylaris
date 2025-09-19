@@ -226,10 +226,10 @@ const ServiceDetail = () => {
   }
 
   const stats = [
-    { icon: Users, value: "100+", label: "Projects Completed", gradient: "from-blue-500 to-purple-500" },
+    { icon: Users, value: "15+", label: "Projects Completed", gradient: "from-blue-500 to-purple-500" },
     { icon: Star, value: "4.9/5", label: "Client Rating", gradient: "from-yellow-500 to-orange-500" },
     { icon: Clock, value: "24/7", label: "Support Available", gradient: "from-green-500 to-emerald-500" },
-    { icon: Award, value: "5+", label: "Years Experience", gradient: "from-purple-500 to-pink-500" },
+    { icon: Award, value: "1+", label: "Years Experience", gradient: "from-purple-500 to-pink-500" },
   ];
 
   return (

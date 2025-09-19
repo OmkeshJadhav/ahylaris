@@ -13,35 +13,110 @@ const serviceCategories = [
     description: "Comprehensive solutions for ERPNext, from consulting and implementation to customization and ongoing support.",
     longDescription: "At Ahlyaris, we help organizations unlock the full potential of ERPNext with tailored solutions, industry expertise, and end-to-end support. Whether you are migrating from legacy systems or starting fresh, we ensure ERPNext becomes the backbone of your digital transformation. ",
     details: [
-      "ERPNext consulting, implementation & Rollout",
-      "Customization, workflow automation, third-party integrations & industry-specific apps built on the Frappe",
-      "Secure & accurate migration of data from legacy systems like SAP ECC, S/4HANA, Tally, or spreadsheets into ERPNext",
-      "Seamless integration of third-party systems like payment gateways, e-commerce platforms, CRM tools, government portals with ERPNext.",
-      "Dedicated helpdesk, ticketing portal, and expert team to resolve issues, provide training, and keep your ERPNext running smoothly.",
-      "Structured training programs to empower your team with ERPNext know-how, ensuring faster adoption and ROI.",
-      "We help you unlock insights with custom reports and dashboards - so your team can make smarter, data-driven decisions every day."
+      {
+        title: "ERPNext Consulting & Implementation",
+        description: "Complete ERPNext consulting, implementation & rollout services tailored to your business needs."
+      },
+      {
+        title: "Customization & Integration",
+        description: "Customization, workflow automation, third-party integrations & industry-specific apps built on the Frappe framework."
+      },
+      {
+        title: "Data Migration Services",
+        description: "Secure & accurate migration of data from legacy systems like SAP ECC, S/4HANA, Tally, or spreadsheets into ERPNext."
+      },
+      {
+        title: "Third-Party System Integration",
+        description: "Seamless integration of third-party systems like payment gateways, e-commerce platforms, CRM tools, government portals with ERPNext."
+      },
+      {
+        title: "Support & Maintenance",
+        description: "Dedicated helpdesk, ticketing portal, and expert team to resolve issues, provide training, and keep your ERPNext running smoothly."
+      },
+      {
+        title: "Training & Adoption",
+        description: "Structured training programs to empower your team with ERPNext know-how, ensuring faster adoption and ROI."
+      },
+      {
+        title: "Custom Reports & Analytics",
+        description: "We help you unlock insights with custom reports and dashboards - so your team can make smarter, data-driven decisions every day."
+      }
     ],
     features: [
-      "Open-source scalability with no per user license cost.",
-      "Granular User Roles & Access: Total control at every level",
-      "Multi-Level Approvals: Smooth workflows, smarter governance",
-      "API-First Architecture: Easy integrations, endless possibilities",
-      "Custom Reports: Insights the way you need them",
-      "Multi-Currency and Multi-Language Support: Go global with confidence",
-      "Multi-Subsidiary Handling: One ERP, many businesses",
-      "Document Management: Store, share & secure your files effortlessly.",
-      "Workflow Automation to automate day-to-day tasks"
+      {
+        title: "Open-Source Scalability",
+        description: "Scale your business without per-user license costs, making growth affordable and sustainable."
+      },
+      {
+        title: "Granular User Roles & Access",
+        description: "Total control at every level with customizable user permissions and role-based access controls."
+      },
+      {
+        title: "Multi-Level Approvals",
+        description: "Implement smooth workflows and smarter governance with configurable approval hierarchies."
+      },
+      {
+        title: "API-First Architecture",
+        description: "Easy integrations and endless possibilities with robust APIs for seamless connectivity."
+      },
+      {
+        title: "Custom Reports & Insights",
+        description: "Generate insights exactly the way you need them with flexible reporting capabilities."
+      },
+      {
+        title: "Multi-Currency & Multi-Language",
+        description: "Go global with confidence using built-in support for multiple currencies and languages."
+      },
+      {
+        title: "Multi-Subsidiary Handling",
+        description: "Manage multiple businesses under one ERP system with consolidated reporting and control."
+      },
+      {
+        title: "Document Management",
+        description: "Store, share, and secure your files effortlessly with integrated document management."
+      },
+      {
+        title: "Workflow Automation",
+        description: "Automate day-to-day tasks and streamline business processes for improved efficiency."
+      }
     ],
     benefits: [
-      "Sales: Automates the entire order-to-cash process while providing real-time insights to boost sales efficiency and growth.",
-      "Procurement/Buying: Streamlines purchasing by automating supplier management, purchase orders, and material requests, ensuring efficient and cost-effective procurement.",
-      "Customer Relationship Management : Handles lead management, opportunity tracking, and customer interactions, enhancing sales efficiency and fostering stronger client relationships.",
-      "Accounting: Streamlines financial management by integrating transactions across sales, purchases, and inventory, ensuring accurate bookkeeping and real-time financial insights.",
-      "Inventory Management: Offers stock control with real-time tracking, automated replenishment, and comprehensive reporting, ensuring optimal inventory levels and operational efficiency.",
-      "Manufacturing: Integrates processes like material planning, work orders, and quality control, enhancing efficiency and reducing costs.",
-      "HR Management: Simplifies recruitment, payroll, attendance, and appraisals -bringing all your workforce management into one seamless system.",
-      "Asset Management: Handles entire asset lifecycle - from acquisition to disposal - enhancing tracking, maintenance, and financial oversight.",
-      "Project Management: Offers project planning and execution by integrating tasks, timelines, resources, and budgets into a unified system."
+      {
+        title: "Sales Management",
+        description: "Automates the entire order-to-cash process while providing real-time insights to boost sales efficiency and growth."
+      },
+      {
+        title: "Procurement & Buying",
+        description: "Streamlines purchasing by automating supplier management, purchase orders, and material requests, ensuring efficient and cost-effective procurement."
+      },
+      {
+        title: "Customer Relationship Management",
+        description: "Handles lead management, opportunity tracking, and customer interactions, enhancing sales efficiency and fostering stronger client relationships."
+      },
+      {
+        title: "Accounting & Finance",
+        description: "Streamlines financial management by integrating transactions across sales, purchases, and inventory, ensuring accurate bookkeeping and real-time financial insights."
+      },
+      {
+        title: "Inventory Management",
+        description: "Offers stock control with real-time tracking, automated replenishment, and comprehensive reporting, ensuring optimal inventory levels and operational efficiency."
+      },
+      {
+        title: "Manufacturing Operations",
+        description: "Integrates processes like material planning, work orders, and quality control, enhancing efficiency and reducing costs."
+      },
+      {
+        title: "HR Management",
+        description: "Simplifies recruitment, payroll, attendance, and appraisals - bringing all your workforce management into one seamless system."
+      },
+      {
+        title: "Asset Management",
+        description: "Handles entire asset lifecycle - from acquisition to disposal - enhancing tracking, maintenance, and financial oversight."
+      },
+      {
+        title: "Project Management",
+        description: "Offers project planning and execution by integrating tasks, timelines, resources, and budgets into a unified system."
+      }
     ],
     gradient: "from-orange-400 via-red-500 to-pink-500",
     bgImage: "/images/services/erp-services.jpg",
@@ -54,25 +129,70 @@ const serviceCategories = [
     description: "Building custom software, mobile, and web applications, and integrating them seamlessly with existing systems.",
     longDescription: "Create powerful, scalable software solutions tailored to your unique business needs. Our expert development team delivers high-quality applications across all platforms, ensuring seamless integration with your existing infrastructure.",
     details: [
-      "Custom software & application development",
-      "Mobile app development (iOS, Android, cross-platform)",
-      "Web application development",
-      "Legacy system modernization",
+      {
+        title: "Custom Software Development",
+        description: "Tailored software solutions and applications designed specifically for your business requirements and workflows."
+      },
+      {
+        title: "Mobile App Development",
+        description: "Native and cross-platform mobile applications for iOS, Android, and hybrid platforms with seamless user experiences."
+      },
+      {
+        title: "Web Application Development",
+        description: "Modern, responsive web applications built with cutting-edge technologies and frameworks for optimal performance."
+      },
+      {
+        title: "Legacy System Modernization",
+        description: "Transform outdated systems into modern, efficient solutions while preserving critical business data and processes."
+      }
     ],
     features: [
-      "Cross-platform compatibility",
-      "Scalable architecture design",
-      "Modern UI/UX design principles",
-      "API-first development approach",
-      "Cloud-native solutions",
-      "Agile development methodology"
+      {
+        title: "Cross-Platform Compatibility",
+        description: "Develop once, deploy everywhere with solutions that work seamlessly across different platforms and devices."
+      },
+      {
+        title: "Scalable Architecture Design",
+        description: "Future-ready architecture that grows with your business needs and handles increasing user loads efficiently."
+      },
+      {
+        title: "Modern UI/UX Design",
+        description: "Intuitive, user-centered design principles that enhance user engagement and satisfaction."
+      },
+      {
+        title: "API-First Development",
+        description: "Robust API architecture enabling easy integrations and seamless data exchange between systems."
+      },
+      {
+        title: "Cloud-Native Solutions",
+        description: "Built for the cloud with microservices architecture, containerization, and auto-scaling capabilities."
+      },
+      {
+        title: "Agile Development Methodology",
+        description: "Iterative development process with continuous feedback, faster delivery, and adaptive planning."
+      }
     ],
     benefits: [
-      "Faster time-to-market",
-      "Reduced development costs",
-      "Enhanced user experience",
-      "Improved system performance",
-      "Future-proof technology stack"
+      {
+        title: "Faster Time-to-Market",
+        description: "Accelerated development cycles and streamlined processes to launch your products ahead of competitors."
+      },
+      {
+        title: "Reduced Development Costs",
+        description: "Efficient development practices and reusable components that minimize overall project costs."
+      },
+      {
+        title: "Enhanced User Experience",
+        description: "Intuitive interfaces and smooth performance that delight users and increase engagement."
+      },
+      {
+        title: "Improved System Performance",
+        description: "Optimized code and architecture delivering faster response times and better resource utilization."
+      },
+      {
+        title: "Future-Proof Technology Stack",
+        description: "Modern technologies and frameworks that ensure long-term maintainability and scalability."
+      }
     ],
     gradient: "from-blue-400 via-purple-500 to-indigo-600",
     bgImage: "/images/services/software-development.jpg",
@@ -85,25 +205,70 @@ const serviceCategories = [
     description: "Managing your IT backbone with installation, maintenance, network setup, and cloud infrastructure management.",
     longDescription: "Ensure your IT infrastructure runs smoothly with our comprehensive support services. From hardware management to cloud infrastructure, we provide reliable, scalable solutions that keep your business running 24/7.",
     details: [
-      "Hardware & software installation and maintenance",
-      "Network setup, monitoring, and troubleshooting",
-      "Cloud infrastructure management (AWS, Azure, GCP)",
-      "Data center management",
+      {
+        title: "Hardware & Software Management",
+        description: "Complete installation, configuration, and maintenance of hardware and software systems for optimal performance."
+      },
+      {
+        title: "Network Infrastructure",
+        description: "Professional network setup, continuous monitoring, and rapid troubleshooting to ensure seamless connectivity."
+      },
+      {
+        title: "Cloud Infrastructure Management",
+        description: "Expert management of cloud platforms including AWS, Azure, and GCP for scalable and reliable operations."
+      },
+      {
+        title: "Data Center Operations",
+        description: "Comprehensive data center management including server maintenance, storage optimization, and facility monitoring."
+      }
     ],
     features: [
-      "24/7 monitoring and support",
-      "Proactive maintenance schedules",
-      "Disaster recovery planning",
-      "Performance optimization",
-      "Security compliance",
-      "Scalable infrastructure design"
+      {
+        title: "24/7 Monitoring & Support",
+        description: "Round-the-clock system monitoring and immediate response to ensure maximum uptime and performance."
+      },
+      {
+        title: "Proactive Maintenance",
+        description: "Scheduled maintenance and preventive measures to avoid system failures and optimize performance."
+      },
+      {
+        title: "Disaster Recovery Planning",
+        description: "Comprehensive backup strategies and recovery procedures to protect against data loss and system failures."
+      },
+      {
+        title: "Performance Optimization",
+        description: "Continuous system tuning and optimization to ensure peak performance and resource efficiency."
+      },
+      {
+        title: "Security Compliance",
+        description: "Implementation of security best practices and compliance standards to protect your infrastructure."
+      },
+      {
+        title: "Scalable Infrastructure Design",
+        description: "Future-ready infrastructure that can easily scale up or down based on your business requirements."
+      }
     ],
     benefits: [
-      "99.9% uptime guarantee",
-      "Reduced IT operational costs",
-      "Enhanced system security",
-      "Improved disaster recovery",
-      "Scalable growth support"
+      {
+        title: "99.9% Uptime Guarantee",
+        description: "Reliable infrastructure management ensuring maximum availability and minimal business disruption."
+      },
+      {
+        title: "Reduced IT Operational Costs",
+        description: "Cost-effective solutions and efficient resource management that reduce overall IT expenses."
+      },
+      {
+        title: "Enhanced System Security",
+        description: "Robust security measures and compliance protocols protecting your critical business data."
+      },
+      {
+        title: "Improved Disaster Recovery",
+        description: "Comprehensive backup and recovery solutions ensuring business continuity during emergencies."
+      },
+      {
+        title: "Scalable Growth Support",
+        description: "Infrastructure that grows with your business, supporting expansion without performance degradation."
+      }
     ],
     gradient: "from-green-400 via-teal-500 to-blue-500",
     bgImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop&crop=entropy&auto=format",
@@ -116,25 +281,70 @@ const serviceCategories = [
     description: "Transforming raw data into actionable insights with database management, BI solutions, and AI-driven analytics.",
     longDescription: "Unlock the power of your data with our advanced analytics solutions. We help you transform raw data into meaningful insights that drive strategic decision-making and business growth.",
     details: [
-      "Database design, management & optimization",
-      "Business intelligence (BI) solutions",
-      "Data visualization & reporting",
-      "Predictive analytics & AI-driven insights",
+      {
+        title: "Database Design & Management",
+        description: "Professional database architecture, optimization, and management ensuring efficient data storage and retrieval."
+      },
+      {
+        title: "Business Intelligence Solutions",
+        description: "Comprehensive BI platforms that transform raw data into meaningful business insights and strategic information."
+      },
+      {
+        title: "Data Visualization & Reporting",
+        description: "Interactive dashboards and custom reports that make complex data easily understandable and actionable."
+      },
+      {
+        title: "Predictive Analytics & AI",
+        description: "Advanced analytics and AI-driven insights that help predict trends and optimize business outcomes."
+      }
     ],
     features: [
-      "Real-time data processing",
-      "Interactive dashboards",
-      "Predictive modeling",
-      "Data warehouse solutions",
-      "Machine learning integration",
-      "Custom reporting tools"
+      {
+        title: "Real-Time Data Processing",
+        description: "Process and analyze data streams in real-time for immediate insights and rapid decision-making."
+      },
+      {
+        title: "Interactive Dashboards",
+        description: "User-friendly, customizable dashboards that provide instant access to key metrics and KPIs."
+      },
+      {
+        title: "Predictive Modeling",
+        description: "Advanced statistical models and machine learning algorithms to forecast future trends and outcomes."
+      },
+      {
+        title: "Data Warehouse Solutions",
+        description: "Centralized data storage systems that integrate data from multiple sources for comprehensive analysis."
+      },
+      {
+        title: "Machine Learning Integration",
+        description: "Seamless integration of ML algorithms to automate insights and improve decision-making processes."
+      },
+      {
+        title: "Custom Reporting Tools",
+        description: "Tailored reporting solutions that deliver exactly the information you need in your preferred format."
+      }
     ],
     benefits: [
-      "Data-driven decision making",
-      "Improved operational efficiency",
-      "Better customer insights",
-      "Competitive advantage",
-      "ROI optimization"
+      {
+        title: "Data-Driven Decision Making",
+        description: "Make informed decisions based on accurate data analysis rather than intuition or guesswork."
+      },
+      {
+        title: "Improved Operational Efficiency",
+        description: "Identify bottlenecks and optimization opportunities to streamline operations and reduce costs."
+      },
+      {
+        title: "Better Customer Insights",
+        description: "Understand customer behavior, preferences, and needs to improve products and services."
+      },
+      {
+        title: "Competitive Advantage",
+        description: "Gain market insights and identify opportunities before competitors through advanced analytics."
+      },
+      {
+        title: "ROI Optimization",
+        description: "Maximize return on investment by identifying the most profitable strategies and initiatives."
+      }
     ],
     gradient: "from-purple-400 via-pink-500 to-red-500",
     bgImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop&crop=entropy&auto=format",
@@ -147,25 +357,70 @@ const serviceCategories = [
     description: "Protecting your digital assets with vulnerability assessments, penetration testing, and robust security solutions.",
     longDescription: "Safeguard your business with our comprehensive cybersecurity solutions. We provide multi-layered protection against evolving threats, ensuring your data and systems remain secure.",
     details: [
-      "Vulnerability assessments, penetration testing & Security monitoring",
-      "Endpoint and network security solutions",
-      "Identity and access management",
-      "Disaster recovery & incident response",
+      {
+        title: "Security Assessment & Testing",
+        description: "Comprehensive vulnerability assessments, penetration testing, and continuous security monitoring to identify and address threats."
+      },
+      {
+        title: "Endpoint & Network Security",
+        description: "Advanced security solutions protecting endpoints, networks, and infrastructure from cyber threats and unauthorized access."
+      },
+      {
+        title: "Identity & Access Management",
+        description: "Robust authentication and authorization systems ensuring only authorized users access sensitive resources."
+      },
+      {
+        title: "Incident Response & Recovery",
+        description: "Rapid disaster recovery and incident response protocols to minimize impact and restore operations quickly."
+      }
     ],
     features: [
-      "Advanced threat detection",
-      "Real-time security monitoring",
-      "Compliance management",
-      "Security awareness training",
-      "Incident response planning",
-      "Regular security audits"
+      {
+        title: "Advanced Threat Detection",
+        description: "AI-powered threat detection systems that identify and respond to sophisticated cyber attacks in real-time."
+      },
+      {
+        title: "Real-Time Security Monitoring",
+        description: "24/7 security operations center monitoring all systems for suspicious activities and potential breaches."
+      },
+      {
+        title: "Compliance Management",
+        description: "Ensure adherence to industry standards and regulations including GDPR, HIPAA, SOX, and other frameworks."
+      },
+      {
+        title: "Security Awareness Training",
+        description: "Comprehensive training programs to educate employees about cybersecurity best practices and threat recognition."
+      },
+      {
+        title: "Incident Response Planning",
+        description: "Detailed response procedures and protocols to handle security incidents effectively and minimize damage."
+      },
+      {
+        title: "Regular Security Audits",
+        description: "Periodic security assessments and audits to identify vulnerabilities and ensure ongoing protection."
+      }
     ],
     benefits: [
-      "Enhanced data protection",
-      "Regulatory compliance",
-      "Reduced security risks",
-      "Business continuity",
-      "Customer trust"
+      {
+        title: "Enhanced Data Protection",
+        description: "Multi-layered security measures protecting sensitive business and customer data from breaches and theft."
+      },
+      {
+        title: "Regulatory Compliance",
+        description: "Meet industry standards and regulatory requirements while avoiding costly fines and penalties."
+      },
+      {
+        title: "Reduced Security Risks",
+        description: "Proactive threat prevention and risk mitigation strategies that significantly reduce cyber attack success rates."
+      },
+      {
+        title: "Business Continuity",
+        description: "Ensure uninterrupted operations with robust security measures and rapid incident response capabilities."
+      },
+      {
+        title: "Customer Trust & Reputation",
+        description: "Build customer confidence and protect brand reputation through demonstrated commitment to security."
+      }
     ],
     gradient: "from-red-400 via-orange-500 to-yellow-500",
     bgImage: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop&crop=entropy&auto=format",
@@ -178,26 +433,74 @@ const serviceCategories = [
     description: "Leveraging the power of AI/ML, IoT, Blockchain, and AR/VR to build future-ready solutions for your enterprise.",
     longDescription: "Stay ahead of the curve with cutting-edge technologies. We help you harness the power of AI, IoT, Blockchain, and AR/VR to create innovative solutions that drive your business into the future.",
     details: [
-      "Artificial Intelligence (AI) & Machine Learning (ML)",
-      "Internet of Things (IoT) solutions",
-      "Blockchain development & consulting",
-      "AR/VR solutions for enterprises",
-      "Industrial Automation 4.0",
+      {
+        title: "Artificial Intelligence & Machine Learning",
+        description: "Advanced AI and ML solutions that automate processes, predict outcomes, and provide intelligent insights for business optimization."
+      },
+      {
+        title: "Internet of Things (IoT) Solutions",
+        description: "Connected device ecosystems that collect, analyze, and act on real-time data to improve operations and customer experiences."
+      },
+      {
+        title: "Blockchain Development & Consulting",
+        description: "Secure, transparent blockchain solutions for supply chain, finance, and data integrity applications."
+      },
+      {
+        title: "AR/VR Enterprise Solutions",
+        description: "Immersive augmented and virtual reality applications for training, visualization, and customer engagement."
+      },
+      {
+        title: "Industrial Automation 4.0",
+        description: "Smart manufacturing and industrial automation solutions leveraging IoT, AI, and robotics for enhanced productivity."
+      }
     ],
     features: [
-      "AI-powered automation",
-      "Smart IoT ecosystems",
-      "Blockchain security",
-      "Immersive AR/VR experiences",
-      "Industry 4.0 integration",
-      "Edge computing solutions"
+      {
+        title: "AI-Powered Automation",
+        description: "Intelligent automation systems that learn and adapt to optimize business processes and reduce manual intervention."
+      },
+      {
+        title: "Smart IoT Ecosystems",
+        description: "Interconnected device networks that provide real-time monitoring, control, and analytics capabilities."
+      },
+      {
+        title: "Blockchain Security",
+        description: "Immutable, decentralized security solutions ensuring data integrity and transparent transactions."
+      },
+      {
+        title: "Immersive AR/VR Experiences",
+        description: "Cutting-edge augmented and virtual reality applications that transform how users interact with digital content."
+      },
+      {
+        title: "Industry 4.0 Integration",
+        description: "Seamless integration of smart technologies into existing industrial processes for enhanced efficiency."
+      },
+      {
+        title: "Edge Computing Solutions",
+        description: "Distributed computing architecture that processes data closer to its source for faster response times."
+      }
     ],
     benefits: [
-      "Innovation leadership",
-      "Operational automation",
-      "Enhanced customer experiences",
-      "New revenue streams",
-      "Future-proof solutions"
+      {
+        title: "Innovation Leadership",
+        description: "Stay ahead of competitors by adopting cutting-edge technologies that differentiate your business in the market."
+      },
+      {
+        title: "Operational Automation",
+        description: "Automate complex processes and reduce human error while increasing efficiency and productivity."
+      },
+      {
+        title: "Enhanced Customer Experiences",
+        description: "Deliver personalized, immersive experiences that exceed customer expectations and drive loyalty."
+      },
+      {
+        title: "New Revenue Streams",
+        description: "Unlock new business opportunities and revenue models through innovative technology implementations."
+      },
+      {
+        title: "Future-Proof Solutions",
+        description: "Invest in technologies that will continue to evolve and provide value as your business grows."
+      }
     ],
     gradient: "from-emerald-400 via-teal-500 to-cyan-600",
     bgImage: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&h=600&fit=crop&crop=entropy&auto=format",
@@ -384,10 +687,15 @@ const ServiceDetail = () => {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 hover:from-green-500/20 hover:to-emerald-500/20 transition-all duration-300 border border-green-400/20"
+                        className="p-6 rounded-2xl bg-gradient-to-r from-green-500/10 to-emerald-500/10 hover:from-green-500/20 hover:to-emerald-500/20 transition-all duration-300 border border-green-400/20"
                       >
-                        <div className="w-3 h-3 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700 leading-relaxed">{detail}</span>
+                        <div className="flex items-start space-x-4">
+                          <div className="w-3 h-3 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-semibold text-gray-900 mb-2">{detail.title}</h4>
+                            <p className="text-gray-700 leading-relaxed">{detail.description}</p>
+                          </div>
+                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -400,17 +708,22 @@ const ServiceDetail = () => {
                     <div className={`w-8 h-8 rounded-full mr-4 bg-gradient-to-r ${service.gradient}`}></div>
                     Key Features
                   </h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
                     {service.features.map((feature, index) => (
                       <motion.div
                         key={index}
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:from-gray-100 hover:to-gray-150 transition-all duration-300 border border-gray-200 group"
+                        className="p-6 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 hover:from-gray-100 hover:to-gray-150 transition-all duration-300 border border-gray-200 group"
                       >
-                        <div className={`w-3 h-3 rounded-full mt-2 flex-shrink-0 bg-gradient-to-r ${service.gradient} group-hover:scale-125 transition-transform duration-300`}></div>
-                        <span className="text-gray-700 leading-relaxed">{feature}</span>
+                        <div className="flex items-start space-x-4">
+                          <div className={`w-3 h-3 rounded-full mt-2 flex-shrink-0 bg-gradient-to-r ${service.gradient} group-hover:scale-125 transition-transform duration-300`}></div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h4>
+                            <p className="text-gray-700 leading-relaxed">{feature.description}</p>
+                          </div>
+                        </div>
                       </motion.div>
                     ))}
                   </div>
@@ -430,10 +743,15 @@ const ServiceDetail = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="flex items-start space-x-4 p-6 rounded-2xl bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 transition-all duration-300 border border-yellow-400/20"
+                        className="p-6 rounded-2xl bg-gradient-to-r from-yellow-500/10 to-orange-500/10 hover:from-yellow-500/20 hover:to-orange-500/20 transition-all duration-300 border border-yellow-400/20"
                       >
-                        <div className="w-3 h-3 rounded-full bg-yellow-400 mt-2 flex-shrink-0"></div>
-                        <span className="text-gray-700 leading-relaxed">{benefit}</span>
+                        <div className="flex items-start space-x-4">
+                          <div className="w-3 h-3 rounded-full bg-yellow-400 mt-2 flex-shrink-0"></div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h4>
+                            <p className="text-gray-700 leading-relaxed">{benefit.description}</p>
+                          </div>
+                        </div>
                       </motion.div>
                     ))}
                   </div>

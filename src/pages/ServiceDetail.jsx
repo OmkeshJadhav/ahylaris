@@ -14,12 +14,12 @@ const serviceCategories = [
     longDescription: "At Ahlyaris, we help organizations unlock the full potential of ERPNext with tailored solutions, industry expertise, and end-to-end support. Whether you are migrating from legacy systems or starting fresh, we ensure ERPNext becomes the backbone of your digital transformation. ",
     details: [
       {
-        title: "ERPNext Consulting & Implementation",
-        description: "Complete ERPNext consulting, implementation & rollout services tailored to your business needs."
+        title: "Implementation & Rollout",
+        description: "Step-by-step ERPNext deployment aligned with your industry standards and compliance needs. From blueprinting to go-live, we handle it all."
       },
       {
-        title: "Customization & Integration",
-        description: "Customization, workflow automation, third-party integrations & industry-specific apps built on the Frappe framework."
+        title: "Customization & App Development",
+        description: "Custom workflows, dashboards, and industry-specific apps built on the Frappe framework to make ERPNext fit your exact needs."
       },
       {
         title: "Data Migration Services",
@@ -38,7 +38,7 @@ const serviceCategories = [
         description: "Structured training programs to empower your team with ERPNext know-how, ensuring faster adoption and ROI."
       },
       {
-        title: "Custom Reports & Analytics",
+        title: "Custom Reports & Dashboards",
         description: "We help you unlock insights with custom reports and dashboards - so your team can make smarter, data-driven decisions every day."
       }
     ],
@@ -83,7 +83,7 @@ const serviceCategories = [
     benefits: [
       {
         title: "Sales Management",
-        description: "Automates the entire order-to-cash process while providing real-time insights to boost sales efficiency and growth."
+        description: "ERPNext’s Sales module automates the entire order-to-cash process while providing real-time insights to boost sales efficiency and growth."
       },
       {
         title: "Procurement & Buying",
@@ -645,8 +645,8 @@ const ServiceDetail = () => {
             <div className="flex bg-gray-100/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-200">
               {[
                 { id: 'details', label: 'What We Offer', icon: CheckCircle },
+                { id: 'benefits', label: service.id === 'erpnext-services' ? 'ERPNext Modules' : 'Benefits', icon: Award },
                 { id: 'features', label: 'Key Features', icon: Star },
-                { id: 'benefits', label: service.id === 'erpnext-services' ? 'ERPNext Modules' : 'Benefits', icon: Award }
               ].map((tab) => (
                 <button
                   key={tab.id}

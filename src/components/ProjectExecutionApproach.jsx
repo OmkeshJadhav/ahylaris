@@ -68,7 +68,7 @@ const ProjectExecutionApproach = () => {
             Our Project Execution Approach
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6 rounded-full"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600 max-w-5xl mx-auto">
             A systematic methodology that ensures successful project delivery through proven processes and excellence
           </p>
         </motion.div>

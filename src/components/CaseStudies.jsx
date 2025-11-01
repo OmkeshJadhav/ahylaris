@@ -46,10 +46,10 @@ const CaseStudies = () => {
               <Card className="h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-lg overflow-hidden">
                 <img src={study.image} alt={study.title} className="w-full h-48 object-cover" />
                 <CardHeader>
-                  <CardTitle className="text-xl font-semibold text-primary">{study.title}</CardTitle>
+                  <CardTitle className="text-lg font-semibold text-primary">{study.title}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex-grow">
-                  <CardDescription className="text-gray-700">{study.description}</CardDescription>
+                  <CardDescription className="text-gray-700 text-md leading-relaxed">{study.description}</CardDescription>
                 </CardContent>
               </Card>
             </motion.div>

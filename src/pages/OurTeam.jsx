@@ -66,7 +66,7 @@ const OurTeam = () => {
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
             <h1 className="text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
-              Meet Our Expert Leadership Team
+              Our Expert Leadership Team
             </h1>
             <p className="text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
               Dedicated professionals driving innovation and excellence in every project

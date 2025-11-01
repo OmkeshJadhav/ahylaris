@@ -27,12 +27,12 @@ const CustomersWhoTrustUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-4xl font-bold text-center mb-12 text-secondary"
+          className="text-4xl font-bold text-center mb-3 text-secondary"
         >
           Industries Powered by ERPNext
         </motion.h2>
         <div className="relative w-full overflow-hidden py-8">
-          <div className="flex animate-marquee whitespace-nowrap">
+          <div className="flex animate-marquee whitespace-nowrap mb-10">
             {logos.map((logo, index) => (
               <img key={index} src={logo} alt={`Client ${index + 1}`} className="mx-8 max-h-8" />
             ))}
@@ -41,7 +41,12 @@ const CustomersWhoTrustUs = () => {
               <img key={`duplicate-${index}`} src={logo} alt={`Client ${index + 1}`} className="mx-8 max-h-20" />
             ))}
           </div>
-          <img src="/images/home/clients-logo/erp-customers.webp" alt="ERPNext" className="mx-auto max-h-72" />
+          <div className="flex flex-col items-center">
+            <h3 className="text-4xl font-bold text-center mb-4 text-secondary">Connect Anything. Sync Everything.</h3>
+            <div className="text-center text-gray-600">From e-commerce platforms to payment gateways, our ERP integrates effortlessly with 130+ tools - so your entire tech stack works in perfect harmony.</div>
+            <img src="/images/home/clients-logo/erp-customers.webp" alt="ERPNext" className="mx-auto max-h-72" />
+          </div>
+
         </div>
       </div>
     </section>

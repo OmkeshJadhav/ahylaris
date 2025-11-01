@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: 'Home', path: '/', icon: '🏠' },
     { name: 'About Us', path: '/about', icon: '👥' },
     { name: 'Services', path: '/services', icon: '⚡' },
-    { name: 'Our Team', path: '/our-team', icon: '🚀' },
+    { name: 'Leadership', path: '/leadership', icon: '🚀' },
     // { name: 'Blogs', path: '/blogs', icon: '✍️' },
     { name: 'Contact', path: '/contact', icon: '📞' },
   ];

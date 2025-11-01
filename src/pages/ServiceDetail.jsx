@@ -82,15 +82,15 @@ const serviceCategories = [
     ],
     benefits: [
       {
-        title: "Sales Management",
+        title: " Sales & Distributions",
         description: "ERPNext’s Sales module automates the entire order-to-cash process while providing real-time insights to boost sales efficiency and growth."
       },
       {
-        title: "Procurement & Buying",
+        title: "Procurement",
         description: "Streamlines purchasing by automating supplier management, purchase orders, and material requests, ensuring efficient and cost-effective procurement."
       },
       {
-        title: "Customer Relationship Management",
+        title: "Customer Relationship Management(CRM)",
         description: "Handles lead management, opportunity tracking, and customer interactions, enhancing sales efficiency and fostering stronger client relationships."
       },
       {
@@ -98,24 +98,28 @@ const serviceCategories = [
         description: "Streamlines financial management by integrating transactions across sales, purchases, and inventory, ensuring accurate bookkeeping and real-time financial insights."
       },
       {
-        title: "Inventory Management",
+        title: "Inventory & Warehouse Management",
         description: "Offers stock control with real-time tracking, automated replenishment, and comprehensive reporting, ensuring optimal inventory levels and operational efficiency."
       },
       {
-        title: "Manufacturing Operations",
+        title: "Manufacturing",
         description: "Integrates processes like material planning, work orders, and quality control, enhancing efficiency and reducing costs."
       },
       {
-        title: "HR Management",
+        title: "HRMS & Payroll",
         description: "Simplifies recruitment, payroll, attendance, and appraisals - bringing all your workforce management into one seamless system."
       },
       {
-        title: "Asset Management",
+        title: "Asset & Maintenance Management",
         description: "Handles entire asset lifecycle - from acquisition to disposal - enhancing tracking, maintenance, and financial oversight."
       },
       {
         title: "Project Management",
         description: "Offers project planning and execution by integrating tasks, timelines, resources, and budgets into a unified system."
+      },
+      {
+        title: "Quality Management",
+        description: "Ensures consistent product and process standards through inspection, testing, and compliance tracking—driving continuous improvement and customer satisfaction."
       }
     ],
     gradient: "from-orange-400 via-red-500 to-pink-500",
@@ -530,9 +534,9 @@ const ServiceDetail = () => {
 
   const stats = [
     { icon: Users, value: "15+", label: "Projects Completed", gradient: "from-blue-500 to-purple-500" },
-    { icon: Star, value: "4.9/5", label: "Client Rating", gradient: "from-yellow-500 to-orange-500" },
+    { icon: Star, value: "93%", label: "Client Satisfaction Ratio", gradient: "from-yellow-500 to-orange-500" },
     { icon: Clock, value: "24/7", label: "Support Available", gradient: "from-green-500 to-emerald-500" },
-    { icon: Award, value: "1+", label: "Years Experience", gradient: "from-purple-500 to-pink-500" },
+    { icon: Award, value: "10+", label: "Years Experience", gradient: "from-purple-500 to-pink-500" },
   ];
 
   return (
@@ -763,7 +767,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-20">
+      {/* <section className="relative py-20">
         <div className="container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -800,7 +804,7 @@ const ServiceDetail = () => {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

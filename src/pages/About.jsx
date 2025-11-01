@@ -180,7 +180,7 @@ const About = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
-                  className="text-xl leading-relaxed text-gray-700 relative z-10 p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20"
+                  className="text-lg leading-relaxed text-gray-700 relative z-10 p-6 bg-white/60 backdrop-blur-sm rounded-2xl shadow-lg border border-white/20"
                 >
                   At <span className="font-bold text-primary">Ahylaris</span>, our vision is to be the leading IT service provider, empowering businesses globally with innovative and reliable <span className="font-semibold text-secondary">ERPNext and Frappe solutions</span>. We strive to foster digital transformation, drive efficiency, and create sustainable growth for our clients through our unwavering commitment to quality, innovation, and trust.
                 </motion.p>

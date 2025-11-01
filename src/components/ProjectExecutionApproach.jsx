@@ -6,32 +6,39 @@ import { CheckCircle, Settings, Users, Rocket } from 'lucide-react';
 const steps = [
   {
     icon: <CheckCircle className="h-8 w-8 text-white" />,
-    title: "Discovery & Planning",
-    description: "We begin by understanding your unique business needs, goals, and challenges to formulate a comprehensive project plan.",
+    title: "Discovery, Planning & Preparation",
+    description: "We start with discovery, pre-planning, and a structured kickoff to align goals and expectations.",
     gradient: "from-blue-500 via-blue-600 to-blue-700",
     bgPattern: "bg-blue-50"
   },
   {
     icon: <Settings className="h-8 w-8 text-white" />,
-    title: "Design & Development",
-    description: "Our experts design and develop tailored solutions, ensuring they align with your requirements and industry best practices.",
+    title: "Design & Strategize",
+    description: "Analyze business needs, conduct fit-gap analysis, and create a high-level system design.",
     gradient: "from-purple-500 via-purple-600 to-purple-700",
     bgPattern: "bg-purple-50"
   },
   {
     icon: <Users className="h-8 w-8 text-white" />,
-    title: "Implementation & Training",
-    description: "We seamlessly integrate the solutions into your existing infrastructure and provide thorough training for your team.",
+    title: "Configure & Development",
+    description: "Set up tailored workflows, configure the system with real data, Development.",
     gradient: "from-green-500 via-green-600 to-green-700",
     bgPattern: "bg-green-50"
   },
   {
     icon: <Rocket className="h-8 w-8 text-white" />,
-    title: "Support & Optimization",
-    description: "Post-launch, we offer continuous support, monitoring, and optimization to ensure long-term success and efficiency.",
+    title: "Training & UAT",
+    description: "Provide hands-on training, test functionalities, and ensure a smooth transition for users.",
     gradient: "from-orange-500 via-orange-600 to-orange-700",
     bgPattern: "bg-orange-50"
   },
+  {
+    icon: <Rocket className="h-8 w-8 text-white" />,
+    title: "Go Live & Support",
+    description: "Deploy the system, offer continuous support, and optimize for long-term success.",
+    gradient: "from-teal-500 via-teal-600 to-teal-700",
+    bgPattern: "bg-teal-50"
+  }
 ];
 
 const ProjectExecutionApproach = () => {
@@ -87,7 +94,7 @@ const ProjectExecutionApproach = () => {
                 <motion.div
                   whileHover={{ scale: 1.02, y: -5 }}
                   transition={{ duration: 0.3 }}
-                  className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100"
+                  className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-50 overflow-hidden border border-gray-100"
                 >
                   {/* Progress Indicator */}
                   <div className="absolute top-0 left-0 right-0 h-2 bg-gray-100">
@@ -103,7 +110,7 @@ const ProjectExecutionApproach = () => {
                   <div className="p-8">
                     {/* Icon and Title */}
                     <div className="flex items-center mb-6">
-                      <div className={`p-4 rounded-2xl bg-gradient-to-br ${step.gradient} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <div className={`p-4 rounded-2xl bg-gradient-to-br ${step.gradient} shadow-lg transition-transform duration-300`}>
                         {step.icon}
                       </div>
                       <div className="ml-6">
@@ -113,7 +120,7 @@ const ProjectExecutionApproach = () => {
                         <div className="flex items-center mt-2">
                           <span className="text-sm font-semibold text-gray-500">Step {index + 1} of {steps.length}</span>
                           <div className="ml-2 flex space-x-1">
-                            {[...Array(4)].map((_, i) => (
+                            {[...Array(5)].map((_, i) => (
                               <motion.div
                                 key={i}
                                 initial={{ scale: 0 }}
@@ -134,38 +141,7 @@ const ProjectExecutionApproach = () => {
                     <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
                       {step.description}
                     </p>
-
-                    {/* Duration Stats */}
-                    {/* <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center">
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          whileInView={{ scale: 1 }}
-                          transition={{ duration: 0.5, delay: index * 0.2 + 0.8 }}
-                          viewport={{ once: true }}
-                          className={`text-2xl font-bold bg-gradient-to-r ${step.gradient} bg-clip-text text-transparent`}
-                        >
-                          {index === 0 ? '1-2' : index === 1 ? '2-4' : index === 2 ? '1-3' : '1+'}
-                        </motion.div>
-                        <div className="text-xs text-gray-500 font-medium">Weeks</div>
-                      </div>
-                      <div className="text-center">
-                        <motion.div
-                          initial={{ scale: 0 }}
-                          whileInView={{ scale: 1 }}
-                          transition={{ duration: 0.5, delay: index * 0.2 + 1 }}
-                          viewport={{ once: true }}
-                          className={`text-2xl font-bold bg-gradient-to-r ${step.gradient} bg-clip-text text-transparent`}
-                        >
-                          {index === 0 ? '100%' : index === 1 ? '95%' : index === 2 ? '98%' : '99%'}
-                        </motion.div>
-                        <div className="text-xs text-gray-500 font-medium">Success Rate</div>
-                      </div>
-                    </div> */}
                   </div>
-
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-transparent to-gray-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
                 </motion.div>
               </div>
 

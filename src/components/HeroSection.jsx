@@ -77,21 +77,21 @@ const HeroSection = () => {
   }, [api, startAutoPlay]);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden">
+    <section className="relative w-full h-[65vh] overflow-hidden">
       <Carousel 
         ref={carouselRef} 
-        className="w-full h-screen"
+        className="w-full h-[65vh]"
         setApi={setApi}
         opts={{
           align: "start",
           loop: true,
         }}
       >
-        <CarouselContent className="h-screen">
+        <CarouselContent className="h-[65vh]">
           {carouselItems.map((item, index) => (
-            <CarouselItem key={index} className="h-screen">
+            <CarouselItem key={index} className="h-[65vh]">
               <div
-                className="relative w-full h-screen bg-cover bg-center flex items-center justify-center text-center text-white"
+                className="relative w-full h-[65vh] bg-cover bg-center flex items-center justify-center text-center text-white"
                 style={{ backgroundImage: `url(${item.image})` }}
               >
                 <div className="absolute inset-0 bg-black opacity-50"></div>

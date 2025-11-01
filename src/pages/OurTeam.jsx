@@ -6,10 +6,14 @@ import { Linkedin, Twitter, Mail, MapPin, Star, Award } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: "Mr",
+    name: "Ms. Bhagyashri",
     role: "Entrepreneur & Founder",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    details: "Mr. XXX is young entrepreneur having 10+ years of rich experience in the field of IT & Other Industry. Having core domain experience in Manufacturing & Construction, Food, Pharma industry. With over a decade of hands-on experience in ERPNext implementations & development, he brings deep expertise in transforming complex business processes into simple, scalable digital solutions. He is believing to solve business challenges with emerging technologies. His focus on building client relationships with core values- Quality, Innovation & Trust.",
+    image: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+    details: [
+      "Ms. Bhagyashri is a visionary entrepreneur and the Founder of Ahylaris, bringing over a decade of rich experience in Information Technology and diverse industries such as Manufacturing, Construction, Agriculture, FMCG, Food, and Pharmaceuticals.",
+      "With extensive expertise in ERP system implementation - including SAP, Odoo, Custom Software Solutions, and open-source ERP platforms such as ERPNext and Frappe - she has successfully led numerous digital transformation initiatives, enabling organizations to streamline complex business processes into efficient, scalable, and technology-driven solutions.",
+      "Under her leadership, Ahylaris stands on the core values of Quality, Innovation, and Trust, which define its commitment to delivering excellence. Ms. Bhagyashri is deeply passionate about leveraging emerging technologies to enhance operational efficiency, drive business agility, and deliver long-term value to clients. Her forward-thinking vision continues to guide Ahylaris in its mission to empower enterprises through digital transformation and sustainable growth."
+    ],
     linkedin: "#",
     twitter: "#",
     gradient: "from-blue-500 to-cyan-500",
@@ -19,7 +23,12 @@ const teamMembers = [
     name: "Hiten A",
     role: "Mentor & Technical Advisor",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    details: "Mr. Hiten is a Mentor & Technical Advisor of Ahylaris. With over 15+ years of experience he is a master planner, architecting scalable IT infrastructures that seamlessly adapt to the company’s dynamic expansion. He is passionate & experts about new emerging technologies like- AI/ML, IoT, Industry 4.0, Automations. Has rich experience in technology consulting with client in India, USA, Middle East, Germany & Other countries. He is guide us robust safeguards, including advanced firewalls and intrusion detection systems, to ensure data integrity and client trust.",
+    details: [
+      "Mr. Hiten serves as the Mentor and Technical Advisor at Ahylaris, bringing over 15 years of distinguished experience in designing and implementing scalable IT infrastructures that support organizational growth and agility.",
+      "He is a strategic technology architect with deep expertise in AI/ML, IoT, Industry 4.0, and Automation, driving innovation and operational excellence across diverse business environments.",
+      "With extensive experience in technology consulting for clients across India, the USA, the Middle East, Germany, and other global regions, Mr. Hiten plays a key role in guiding Ahylaris' technology vision.",
+      "His focus lies in integrating emerging technologies to solve complex business challenges while ensuring robust data protection. Through his leadership, Ahylaris upholds the highest standards of security, reliability, and client trust - fortified by advanced firewalls, intrusion detection systems, and strong data integrity frameworks."
+    ],
     linkedin: "#",
     twitter: "#",
     gradient: "from-orange-500 to-red-500",
@@ -38,7 +47,7 @@ const OurTeam = () => {
   return (
     <div className="relative overflow-hidden">
       {/* Hero Section with Enhanced Background */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden">
         {/* Team Background Image */}
         <div className="absolute inset-0">
           <img 
@@ -57,7 +66,7 @@ const OurTeam = () => {
             transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
           >
             <h1 className="text-6xl lg:text-7xl font-bold mb-6 text-white drop-shadow-2xl">
-              Meet Our Expert Team
+              Meet Our Expert Leadership Team
             </h1>
             <p className="text-xl lg:text-2xl text-white max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
               Dedicated professionals driving innovation and excellence in every project
@@ -91,7 +100,7 @@ const OurTeam = () => {
       </section>
 
       {/* Team Members Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-10 overflow-hidden">
         {/* Background with gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20"></div>
 
@@ -153,9 +162,19 @@ const OurTeam = () => {
 
                     {/* Details */}
                     <div className="space-y-4 mb-6 flex-grow">
-                      <div className="flex items-center justify-center space-x-3 text-gray-600">
-                        <MapPin className="w-4 h-4 text-gray-400" />
-                        <span className="text-base text-justify">{member.details}</span>
+                      <div className="text-gray-600 space-y-3">
+                        {Array.isArray(member.details) ? (
+                          member.details.map((paragraph, idx) => (
+                            <p key={idx} className="text-base text-justify leading-relaxed">
+                              {paragraph}
+                            </p>
+                          ))
+                        ) : (
+                          <div className="flex items-center justify-center space-x-3">
+                            <MapPin className="w-4 h-4 text-gray-400" />
+                            <span className="text-base text-justify">{member.details}</span>
+                          </div>
+                        )}
                       </div>
                     </div>
 

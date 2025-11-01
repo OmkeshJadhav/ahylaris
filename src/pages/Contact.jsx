@@ -10,8 +10,8 @@ const Contact = () => {
   const contactMethods = [
     {
       icon: MapPin,
-      title: "Visit Our Office",
-      info: "123 Tech Avenue, Innovation City, 56789",
+      title: "Our Presence",
+      info: "Nanded City, Pune, Maharashtra, India  411041",
       gradient: "from-purple-500 to-pink-500",
       hoverGradient: "from-purple-600 to-pink-600",
       bgImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=500&h=300&fit=crop",
@@ -19,7 +19,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      info: "+1 (555) 123-4567",
+      info: "+919370372899",
       gradient: "from-blue-500 to-cyan-500",
       hoverGradient: "from-blue-600 to-cyan-600",
       bgImage: "https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=500&h=300&fit=crop",
@@ -27,7 +27,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      info: "info@ahylaris.com",
+      info: "ahylarisinfotech@gmail.com",
       gradient: "from-green-500 to-emerald-500",
       hoverGradient: "from-green-600 to-emerald-600",
       bgImage: "https://images.unsplash.com/photo-1596526131083-e8c633c948d2?w=500&h=300&fit=crop",
@@ -153,11 +153,11 @@ const Contact = () => {
       </section>
 
       {/* Contact Form and Map Section */}
-      <section className="relative py-20">
+      {/* <section className="relative py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16"> */}
             {/* Contact Form */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -224,10 +224,10 @@ const Contact = () => {
                   </motion.div>
                 </form>
               </div>
-            </motion.div>
+            </motion.div> */}
 
             {/* Map Section */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
@@ -254,15 +254,14 @@ const Contact = () => {
                     className="rounded-2xl"
                   ></iframe>
                   
-                  {/* Map Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none rounded-2xl"></div>
                 </motion.div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </div>
-        </div>
-      </section>
-    </div>
+    //     </div>
+    //   </section>
+    // </div>
   );
 };
 

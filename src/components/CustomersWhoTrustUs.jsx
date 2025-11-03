@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+
 const logos = [
   'images/home/clients-logo/zerodha-logo.svg',
   '/images/home/clients-logo/blinkit-logo.png',

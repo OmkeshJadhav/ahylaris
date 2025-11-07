@@ -6,11 +6,11 @@ import { Linkedin, Twitter, Mail, MapPin, Star, Award } from 'lucide-react';
 
 const teamMembers = [
   {
-    name: "Ms. Bhagyashri",
+    name: "Bhagyashri B",
     role: "Entrepreneur & Founder",
     image: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
     details: [
-      "Ms. Bhagyashri is a visionary entrepreneur and the Founder of Ahylaris, bringing over a decade of rich experience in Information Technology and diverse industries such as Manufacturing, Construction, Agriculture, FMCG, Food, and Pharmaceuticals.",
+      "Bhagyashri is a visionary entrepreneur and the Founder of Ahylaris, bringing over a decade of rich experience in Information Technology and diverse industries such as Manufacturing, Construction, Agriculture, FMCG, Food, and Pharmaceuticals.",
       "With extensive expertise in ERP system implementation - including SAP, Odoo, Custom Software Solutions, and open-source ERP platforms such as ERPNext and Frappe - she has successfully led numerous digital transformation initiatives, enabling organizations to streamline complex business processes into efficient, scalable, and technology-driven solutions.",
       "Under her leadership, Ahylaris stands on the core values of Quality, Innovation, and Trust, which define its commitment to delivering excellence. Ms. Bhagyashri is deeply passionate about leveraging emerging technologies to enhance operational efficiency, drive business agility, and deliver long-term value to clients. Her forward-thinking vision continues to guide Ahylaris in its mission to empower enterprises through digital transformation and sustainable growth."
     ],

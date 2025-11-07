@@ -6,8 +6,8 @@ import { CheckCircle, Settings, Users, Rocket } from 'lucide-react';
 const steps = [
   {
     icon: <CheckCircle className="h-8 w-8 text-white" />,
-    title: "Discovery, Planning & Preparation",
-    description: "We start with discovery, pre-planning, and a structured kickoff to align goals and expectations.",
+    title: "Planning, Preparation & Discovery",
+    description: "We start with pre-planning, discovery and a structured kickoff to align goals and expectations.",
     gradient: "from-blue-500 via-blue-600 to-blue-700",
     bgPattern: "bg-blue-50"
   },
@@ -107,13 +107,13 @@ const ProjectExecutionApproach = () => {
                     />
                   </div>
 
-                  <div className="p-8">
+                  <div className="p-4">
                     {/* Icon and Title */}
-                    <div className="flex items-center mb-6">
-                      <div className={`p-4 rounded-2xl bg-gradient-to-br ${step.gradient} shadow-lg transition-transform duration-300`}>
+                    <div className="flex items-center mb-3">
+                      <div className={`p-3 rounded-2xl bg-gradient-to-br ${step.gradient} shadow-lg transition-transform duration-300`}>
                         {step.icon}
                       </div>
-                      <div className="ml-6">
+                      <div className="ml-4">
                         <h3 className="text-2xl font-bold text-gray-800 group-hover:text-primary transition-colors duration-300">
                           {step.title}
                         </h3>
@@ -138,7 +138,7 @@ const ProjectExecutionApproach = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                    <p className="text-gray-600 leading-relaxed mb-2 group-hover:text-gray-700 transition-colors duration-300">
                       {step.description}
                     </p>
                   </div>
